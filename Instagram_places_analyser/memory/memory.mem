@@ -1,0 +1,52 @@
+api: !!python/object:instagram.client.InstagramAPI
+  access_token: 3123381139.366fffd.5be62d70b0ca4b998ed5210cd1e6a351
+  client_id: null
+  client_ips: null
+  client_secret: eae8e18827244476bb895bdfe1a7061d
+  format: json
+  redirect_uri: null
+  x_ratelimit: '5000'
+  x_ratelimit_remaining: '4293'
+base_url: https://westus.api.cognitive.microsoft.com/
+cursor:
+  blocs:
+  - anchor: 4
+    condition: $place
+    idle: false
+    type: 1
+  - anchor: 1
+    condition: 'TRUE'
+    idle: false
+    type: 1
+  position: 5
+  state: exec
+database_name: places
+headers:
+  Content-Type: application/json
+  Ocp-Apim-Subscription-Key: 5258e2016a2745dd9b3aa53f6dabc690
+id: '12318445'
+instagram_access_token: 3123381139.366fffd.5be62d70b0ca4b998ed5210cd1e6a351
+instagram_client_secret: eae8e18827244476bb895bdfe1a7061d
+instagram_mongo_client:
+  database: places
+  host: localhost
+  port: '27017'
+instagram_place_name: Central Park
+place:
+  !!python/unicode 'Name': !!python/unicode 'Marea'
+  !!python/unicode '_id': !!python/object/new:bson.objectid.ObjectId
+    state: !!binary |
+      WKWtOEqDPzZDUl8+
+  !!python/unicode 'country': !!python/unicode 'USA'
+  !!python/unicode 'formatted_address': !!python/unicode '240 Central Park S, New
+    York, NY 10019, United States'
+  !!python/unicode 'lat': !!python/unicode '40.7674054'
+  !!python/unicode 'lng': !!python/unicode '-73.9810568'
+  !!python/unicode 'place_id': !!python/unicode 'ChIJvWSDS_ZYwokRiG9D395loxo'
+  !!python/unicode 'state': !!python/unicode 'NY'
+  !!python/unicode 'tags':
+  - !!python/unicode 'restaurant'
+place_mongo_client:
+  database: places
+  host: localhost
+  port: '27017'

@@ -1,0 +1,12 @@
+clock: 00:00
+cursor:
+  blocs:
+  - anchor: 0
+    condition: 'TRUE'
+    idle: false
+    type: 1
+  position: 1
+  state: exec
+filter: '%H:%M'
+go: false
+refresh: 60

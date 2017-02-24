@@ -1,0 +1,14 @@
+current_step:
+  function:
+    name: worldmapper.maps_api.get_places_within_state_by_type
+    options: null
+    parameters:
+    - $search_type
+    - $state
+    - $country
+    - $gm_api
+    return:
+    - places_in_state
+  name: Get all places by state
+state:
+  running: true

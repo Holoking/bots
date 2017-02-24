@@ -1,0 +1,71 @@
+{'cursor': {'position': 0, 'state': 'exec', 'blocs': []}, 'states': ['Arianna', 'Beja', 'Ben Arous', 'Bizerte', 'Gabes', 'Gafsa', 'Jendouba', 'Kairouan', 'Kasserine', 'Kebili', 'Le Kef', 'Mahdia', 'Mannouba', 'Mednine', 'Monastir', 'Nabeul', 'Sfax', 'Sidi Bou Zid', 'Selianna', 'Sousse', 'Tataouine', 'Tozeur', 'Tunis', 'Zaghouen'], 'google_account_key': 'AIzaSyBksI1g3hmNZXLyoctDmQoH8hdnpJWGLRo', 'keywords': [u'caf\xe9', 'restaurant', 'fast food', 'banque', u'\xe9cole', u'\xe9cole primaire', "jardin d'enfant", u'lyc\xe9e', u'coll\xe8ge', 'patisserie', 'metro', 'parking', 'poste de police', 'hopital', u'facult\xe9', u'cin\xe9ma', u'th\xe9atre', u'supermarch\xe9', 'magasin', 'station'], 'country': 'Tunisia', 'place_mongo_client': {'pwd': 'AbdAbd', 'user': 'NabNab', 'database': 'TunisTest', 'host': 'localhost', 'collection': 'places', 'port': '27017'}}
+entered for
+entered for
+[{'lat': '39.962978', 'lng': '-75.600545', 'place_id': 'ChIJOxDx4kLxxokRJfkU8766LRA', 'formatted_address': '323 E Gay St, West Chester, PA 19380, United States', 'Name': "Arianna's Gourmet Cafe"}, {'lat': '36.620485', 'lng': '-121.9169429', 'place_id': 'ChIJd5WLJkzhjYARynSPCHSgP94', 'formatted_address': '543 Lighthouse Ave, Pacific Grove, CA 93950, United States', 'Name': 'Cafe Ariana'}, {'lat': '40.8714639', 'lng': '-73.4259531', 'place_id': 'ChIJ30b1nHgo6IkRbNxRwsu3YMQ', 'formatted_address': '255 Main St, Huntington, NY 11743, United States', 'Name': 'Ariana Cafe and Restaurant'}]
+entered for
+result of query: None
+result of query: None
+result of query: None
+exited for
+[{'lat': '38.0074282', 'lng': '-7.8541383', 'place_id': 'ChIJPRxopWZ0Gg0RS-1dEH4T_7I', 'formatted_address': 'R. de Maria Isabel Covas Lima, Beja, Portugal', 'Name': 'Pastelaria NunoLina'}, {'lat': '38.0158507', 'lng': '-7.8671816', 'place_id': 'ChIJWToc64J0Gg0RFkKUCEnYOek', 'formatted_address': 'R. de Lisboa, Beja, Portugal', 'Name': 'Colher de pau'}, {'lat': '38.0134012', 'lng': '-7.8614906', 'place_id': 'ChIJhwsI2Yd0Gg0RNkF7Dx1wA1g', 'formatted_address': 'Beja, Portugal', 'Name': 'Capitel'}, {'lat': '38.0119507', 'lng': '-7.8665576', 'place_id': 'ChIJPUp4TYd0Gg0RYokFKzhIXBI', 'formatted_address': 'R. G6, proximo da rua n\xc2\xba 02050335 1, 7800-454 Beja, Portugal', 'Name': 'O Papa Migas'}, {'lat': '38.0105219', 'lng': '-7.8546721', 'place_id': 'ChIJ72yCmGF0Gg0RoeJIbRzhH6I', 'formatted_address': 'Rua Escrit. Ferreira De Castro, Lt25, 32-a, Bairro Dos Falc\xc3\xb5es-beja, Beja, 7800, Portugal', 'Name': 'Snack Bar Restaurante Os G\xc3\xa9meos'}, {'lat': '38.0148042', 'lng': '-7.8640428', 'place_id': 'ChIJs9rC94Z0Gg0RDxL4BeVOafI', 'formatted_address': 'R. dos Infantes 17A, 7800-495 Beja, Portugal', 'Name': 'Farelo Petiscos'}, {'lat': '38.0085794', 'lng': '-7.8593394', 'place_id': 'ChIJ64fwEGN0Gg0RH-6jyZVsChs', 'formatted_address': 'Pra\xc3\xa7a Antonio Lopes Graca 3, 7800-003 Beja, Portugal', 'Name': 'Ilha do peixe'}, {'lat': '38.0162755', 'lng': '-7.8670157', 'place_id': 'ChIJlf3QVYF0Gg0Rb1ZU9FrDR5c', 'formatted_address': 'Tv. Alferes Malheiro 1, 7800 Beja, Portugal', 'Name': 'Restaurante O Charoco'}, {'lat': '38.0110315', 'lng': '-7.8595114', 'place_id': 'ChIJiVSjkGJ0Gg0R2eBStHp8dJo', 'formatted_address': '508, R. Prof. Bento de Jesus Caraca 4, 7800 Beja, Portugal', 'Name': 'Sabores do Campo'}, {'lat': '38.0099174', 'lng': '-7.865767', 'place_id': 'ChIJ1ZQVwn10Gg0RgV2BdfZBDxA', 'formatted_address': 'R. dos Acores 12, 7800 Beja, Portugal', 'Name': 'Espiga de Sal'}, {'lat': '38.0137504', 'lng': '-7.8730935', 'place_id': 'ChIJeY_dM35zGg0RiFUY8qFTFw4', 'formatted_address': 'R. de Pedro Soares 36A, 7800-295 Beja, Portugal', 'Name': 'Pizzaria Milano'}, {'lat': '38.0155071', 'lng': '-7.8618134', 'place_id': 'ChIJq8CDIoZ0Gg0Rnqtv0cwBvXQ', 'formatted_address': 'R. da Casa Pia 26, 7800-144 Beja, Portugal', 'Name': 'Restaurante da Galeria do Desassossego'}, {'lat': '38.0104695', 'lng': '-7.8645359', 'place_id': 'ChIJnc42mn10Gg0Rgbpo78yoD44', 'formatted_address': 'Av. Fialho de Almeida 16, 7800 Beja, Portugal', 'Name': 'Hamburgueria da Avenida'}, {'lat': '38.0124487', 'lng': '-7.8611033', 'place_id': 'ChIJdREACYh0Gg0RyTOBQFqPJuE', 'formatted_address': 'Largo dos Correios 9, 7800-018 Beja, Portugal', 'Name': 'Dona Maria'}, {'lat': '38.0115424', 'lng': '-7.8634037', 'place_id': 'ChIJmS6Vh4d0Gg0RcdwxLhawVUI', 'formatted_address': 'Rua de Luiz de Cam\xc3\xb5es 7, 7800-490 Beja, Portugal', 'Name': 'King Doner Kebab'}, {'lat': '38.0097336', 'lng': '-7.8624009', 'place_id': 'ChIJqXU8P310Gg0RbSeNrVX_uzM', 'formatted_address': 'Av. Vasco da Gama 2, Beja, Portugal', 'Name': 'Pulo do Lobo'}, {'lat': '38.0137766', 'lng': '-7.8615551', 'place_id': 'ChIJf5Tc1od0Gg0RJX6gcGgly7o', 'formatted_address': 'R. Alexandre Herculano 25, 7800-030 Beja, Portugal', 'Name': '"Tem Avondo"'}, {'lat': '38.0093427', 'lng': '-7.8613736', 'place_id': 'ChIJ5dOZLH10Gg0RGR5nfkk_voQ', 'formatted_address': 'Av. do Brasil, Beja, Portugal', 'Name': 'Restaurante Gulla'}, {'lat': '38.0145788', 'lng': '-7.8654353', 'place_id': 'ChIJS8PRwoZ0Gg0Ri4a7NdKvjp8', 'formatted_address': 'R. da Moeda 23, 7800-000 Beja, Portugal', 'Name': 'Restaurante Adega T\xc3\xadpica 25 De Abril'}, {'lat': '38.013991', 'lng': '-7.865626', 'place_id': 'ChIJh9Jc34Z0Gg0RTF30hFyXSmI', 'formatted_address': 'Rua das Portas de Aljustrel n.\xc2\xba 29, 7800-466 Beja, Portugal', 'Name': 'Guitar Riffs bar caf\xc3\xa9 concerto & jam spot'}]
+entered for
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+result of query: None
+exited for
+error detected
+entered for
+result of query: {u'Name': u'Pastelaria NunoLina', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJPRxopWZ0Gg0RS-1dEH4T_7I', u'state': u'Beja', u'lat': u'38.0074282', u'lng': u'-7.8541383', u'_id': ObjectId('58a0a7b56726624e9bd98594'), u'formatted_address': u'R. de Maria Isabel Covas Lima, Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Colher de pau', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJWToc64J0Gg0RFkKUCEnYOek', u'state': u'Beja', u'lat': u'38.0158507', u'lng': u'-7.8671816', u'_id': ObjectId('58a0a7b56726624e9bd98597'), u'formatted_address': u'R. de Lisboa, Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Capitel', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJhwsI2Yd0Gg0RNkF7Dx1wA1g', u'state': u'Beja', u'lat': u'38.0134012', u'lng': u'-7.8614906', u'_id': ObjectId('58a0a7b56726624e9bd9859a'), u'formatted_address': u'Beja, Portugal'}
+error detected
+result of query: {u'Name': u'O Papa Migas', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJPUp4TYd0Gg0RYokFKzhIXBI', u'state': u'Beja', u'lat': u'38.0119507', u'lng': u'-7.8665576', u'_id': ObjectId('58a0a7b56726624e9bd9859d'), u'formatted_address': u'R. G6, proximo da rua n\xba 02050335 1, 7800-454 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Snack Bar Restaurante Os G\xe9meos', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJ72yCmGF0Gg0RoeJIbRzhH6I', u'state': u'Beja', u'lat': u'38.0105219', u'lng': u'-7.8546721', u'_id': ObjectId('58a0a7b56726624e9bd985a0'), u'formatted_address': u'Rua Escrit. Ferreira De Castro, Lt25, 32-a, Bairro Dos Falc\xf5es-beja, Beja, 7800, Portugal'}
+error detected
+result of query: {u'Name': u'Farelo Petiscos', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJs9rC94Z0Gg0RDxL4BeVOafI', u'state': u'Beja', u'lat': u'38.0148042', u'lng': u'-7.8640428', u'_id': ObjectId('58a0a7b56726624e9bd985a3'), u'formatted_address': u'R. dos Infantes 17A, 7800-495 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Ilha do peixe', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJ64fwEGN0Gg0RH-6jyZVsChs', u'state': u'Beja', u'lat': u'38.0085794', u'lng': u'-7.8593394', u'_id': ObjectId('58a0a7b56726624e9bd985a6'), u'formatted_address': u'Pra\xe7a Antonio Lopes Graca 3, 7800-003 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Restaurante O Charoco', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJlf3QVYF0Gg0Rb1ZU9FrDR5c', u'state': u'Beja', u'lat': u'38.0162755', u'lng': u'-7.8670157', u'_id': ObjectId('58a0a7b66726624e9bd985a9'), u'formatted_address': u'Tv. Alferes Malheiro 1, 7800 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Sabores do Campo', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJiVSjkGJ0Gg0R2eBStHp8dJo', u'state': u'Beja', u'lat': u'38.0110315', u'lng': u'-7.8595114', u'_id': ObjectId('58a0a7b66726624e9bd985ac'), u'formatted_address': u'508, R. Prof. Bento de Jesus Caraca 4, 7800 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Espiga de Sal', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJ1ZQVwn10Gg0RgV2BdfZBDxA', u'state': u'Beja', u'lat': u'38.0099174', u'lng': u'-7.865767', u'_id': ObjectId('58a0a7b66726624e9bd985af'), u'formatted_address': u'R. dos Acores 12, 7800 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Pizzaria Milano', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJeY_dM35zGg0RiFUY8qFTFw4', u'state': u'Beja', u'lat': u'38.0137504', u'lng': u'-7.8730935', u'_id': ObjectId('58a0a7b66726624e9bd985b2'), u'formatted_address': u'R. de Pedro Soares 36A, 7800-295 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Restaurante da Galeria do Desassossego', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJq8CDIoZ0Gg0Rnqtv0cwBvXQ', u'state': u'Beja', u'lat': u'38.0155071', u'lng': u'-7.8618134', u'_id': ObjectId('58a0a7b66726624e9bd985b5'), u'formatted_address': u'R. da Casa Pia 26, 7800-144 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Hamburgueria da Avenida', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJnc42mn10Gg0Rgbpo78yoD44', u'state': u'Beja', u'lat': u'38.0104695', u'lng': u'-7.8645359', u'_id': ObjectId('58a0a7b66726624e9bd985b8'), u'formatted_address': u'Av. Fialho de Almeida 16, 7800 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Dona Maria', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJdREACYh0Gg0RyTOBQFqPJuE', u'state': u'Beja', u'lat': u'38.0124487', u'lng': u'-7.8611033', u'_id': ObjectId('58a0a7b66726624e9bd985bb'), u'formatted_address': u'Largo dos Correios 9, 7800-018 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'King Doner Kebab', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJmS6Vh4d0Gg0RcdwxLhawVUI', u'state': u'Beja', u'lat': u'38.0115424', u'lng': u'-7.8634037', u'_id': ObjectId('58a0a7b66726624e9bd985be'), u'formatted_address': u'Rua de Luiz de Cam\xf5es 7, 7800-490 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Pulo do Lobo', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJqXU8P310Gg0RbSeNrVX_uzM', u'state': u'Beja', u'lat': u'38.0097336', u'lng': u'-7.8624009', u'_id': ObjectId('58a0a7b66726624e9bd985c1'), u'formatted_address': u'Av. Vasco da Gama 2, Beja, Portugal'}
+error detected
+result of query: {u'Name': u'"Tem Avondo"', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJf5Tc1od0Gg0RJX6gcGgly7o', u'state': u'Beja', u'lat': u'38.0137766', u'lng': u'-7.8615551', u'_id': ObjectId('58a0a7b66726624e9bd985c4'), u'formatted_address': u'R. Alexandre Herculano 25, 7800-030 Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Restaurante Gulla', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJ5dOZLH10Gg0RGR5nfkk_voQ', u'state': u'Beja', u'lat': u'38.0093427', u'lng': u'-7.8613736', u'_id': ObjectId('58a0a7b66726624e9bd985c7'), u'formatted_address': u'Av. do Brasil, Beja, Portugal'}
+error detected
+result of query: {u'Name': u'Restaurante Adega T\xedpica 25 De Abril', u'tags': [u'caf\xe9'], u'country': u'Tunisia', u'place_id': u'ChIJS8PRwoZ0Gg0Ri4a7NdKvjp8', u'state': u'Beja', u'lat': u'38.0145788', u'lng': u'-7.8654353', u'_id': ObjectId('58a0a7b66726624e9bd985ca'), u'formatted_address': u'

@@ -1,0 +1,440 @@
+country: USA
+cursor:
+  blocs:
+  - anchor: 5
+    container: $places_in_state
+    idle: false
+    pointer: 59
+    type: 0
+    vars: place
+  - anchor: 3
+    container: $states
+    idle: false
+    pointer: 28
+    type: 0
+    vars: state
+  - anchor: 2
+    container: $keywords
+    idle: false
+    pointer: 0
+    type: 0
+    vars: search_type
+  - anchor: 1
+    condition: 'TRUE'
+    idle: false
+    type: 1
+  position: 6
+  state: exec
+gm_api: !!python/object:googlemaps.client.Client
+  channel: null
+  client_id: null
+  client_secret: null
+  key: AIzaSyBksI1g3hmNZXLyoctDmQoH8hdnpJWGLRo
+  queries_per_second: 10
+  requests_kwargs:
+    headers:
+      User-Agent: GoogleGeoApiClientPython/2.4.5
+    timeout: null
+    verify: true
+  retry_timeout: !!python/object/apply:datetime.timedelta
+  - 0
+  - 60
+  - 0
+  sent_times: !!python/object/apply:collections.deque
+  - - 1487266106.398874
+    - 1487266200.068228
+    - 1487266210.203358
+    - 1487266215.813351
+    - 1487266313.237266
+    - 1487266326.566543
+    - 1487266333.96033
+    - 1487266642.275683
+    - 1487266648.693752
+    - 1487266654.256285
+  - 10
+  timeout: null
+google_account_key: AIzaSyBksI1g3hmNZXLyoctDmQoH8hdnpJWGLRo
+keywords:
+- restaurant
+- bar
+- park
+- school
+- university
+- store
+- fast food
+- stadium
+on_except:
+- exception:
+    class: Timeout
+  handler:
+    function:
+      name: exception_handlers.TimeWait.execute
+      options: null
+      parameters:
+      - 900
+      return: null
+place: &id001
+  Name: Aladdin's Cafe
+  formatted_address: 1609 32nd Ave S, Fargo, ND 58103, United States
+  lat: '46.8333138'
+  lng: '-96.8058105'
+  place_id: ChIJ7Qs6Pz_MyFIR1b6jr7HXz40
+place_mongo_client:
+  collection: places
+  database: places
+  host: localhost
+  port: '27017'
+  pwd: 87BotsinAction!
+  user: likwidteam
+places_in_state:
+- Name: Frieds Family Restaurant
+  formatted_address: 1010 Boundary St NW, Mandan, ND 58554, United States
+  lat: '46.8435467'
+  lng: '-100.9083383'
+  place_id: ChIJg1xl06ec11IRViC8qcKoTtI
+- Name: Denny's
+  formatted_address: 4437 13th Ave SW, Fargo, ND 58103, United States
+  lat: '46.8623056'
+  lng: '-96.8611784'
+  place_id: ChIJIUxW9mfLyFIRTfuQ1SmlwbQ
+- Name: Denny's
+  formatted_address: 405 S 7th St, Bismarck, ND 58504, United States
+  lat: '46.8017771'
+  lng: '-100.7812478'
+  place_id: ChIJc_FS5j2D11IRc4EvBp7D7dw
+- Name: Denny's
+  formatted_address: 3770 32nd Ave S, Grand Forks, ND 58201, United States
+  lat: '47.8900204'
+  lng: '-97.082163'
+  place_id: ChIJK2ox1vCAxlIRe1MOAX_EV7A
+- Name: Denny's
+  formatted_address: 2701 S Broadway St, Minot, ND 58701, United States
+  lat: '48.20576'
+  lng: '-101.2951952'
+  place_id: ChIJ0QCBfVgq31IRFexyRAoICAY
+- Name: IHOP
+  formatted_address: 1701 45th St S, Fargo, ND 58103, United States
+  lat: '46.853829'
+  lng: '-96.862431'
+  place_id: ChIJsXzqa1_LyFIRLfYHoxlDl-U
+- Name: Acapulco Mexican Restaurant
+  formatted_address: 1150 36th St S, Fargo, ND 58103, United States
+  lat: '46.8634962'
+  lng: '-96.8394499'
+  place_id: ChIJf7yFI3jLyFIRWWiqpg-q0nQ
+- Name: Culver's
+  formatted_address: 3197 25th St S, Fargo, ND 58103, United States
+  lat: '46.8328677'
+  lng: '-96.8206368'
+  place_id: ChIJZ2qr5VzMyFIRUmVPbUGLYK8
+- Name: Toasted Frog Bismarck
+  formatted_address: 124 N 4th St, Bismarck, ND 58501, United States
+  lat: '46.8063444'
+  lng: '-100.7864377'
+  place_id: ChIJhZ0_QxSD11IRG8GNMPvSmoI
+- Name: Family Bakery & Restaurant
+  formatted_address: 412 Main St, Bottineau, ND 58318, United States
+  lat: '48.8278177'
+  lng: '-100.4461086'
+  place_id: ChIJQ-ucVQoy3FIRvZG13rLIuJg
+- Name: Ruby Tuesday
+  formatted_address: 2535 23rd Ave S, Fargo, ND 58103, United States
+  lat: '46.8453868'
+  lng: '-96.8203345'
+  place_id: ChIJ__Is52_MyFIRMNOmyf6JUKw
+- Name: Ruby Tuesday
+  formatted_address: 3915 32nd Ave S, Grand Forks, ND 58201, United States
+  lat: '47.8886499'
+  lng: '-97.0841054'
+  place_id: ChIJ1d1H6PaAxlIRXkatlCLTE2s
+- Name: DQ Grill & Chill Restaurant
+  formatted_address: 1924 4th Ave NW, Minot, ND 58703, United States
+  lat: '48.2403185'
+  lng: '-101.3226749'
+  place_id: ChIJp9lXcSoq31IRT53WFm5l0ik
+- Name: DQ Grill & Chill Restaurant
+  formatted_address: 372 15th St W, Dickinson, ND 58601, United States
+  lat: '46.8993787'
+  lng: '-102.7913836'
+  place_id: ChIJ0UvMEVg9JlMR1ucjETGX0XE
+- Name: Barbacoa
+  formatted_address: 3241 42nd St S, Fargo, ND 58104, United States
+  lat: '46.831304'
+  lng: '-96.852009'
+  place_id: ChIJX68GX-rMyFIRQzDyRdU6Cuc
+- Name: Green House Cafe
+  formatted_address: 68 Broadway N, Fargo, ND 58102, United States
+  lat: '46.8765969'
+  lng: '-96.7878909'
+  place_id: ChIJSWA39l3JyFIRiQ6E9I562F0
+- Name: Theodore's Dining Room
+  formatted_address: 301 3rd Ave, Medora, ND 58645, United States
+  lat: '46.9149221'
+  lng: '-103.5242584'
+  place_id: ChIJWQ1MTnrpJVMRLqiLpX1zG7Q
+- Name: DQ Grill & Chill Restaurant
+  formatted_address: 1300 ND-49, Beulah, ND 58523, United States
+  lat: '47.2757539'
+  lng: '-101.7823035'
+  place_id: ChIJweWIaOKIJ1MRF7us8AXiTVE
+- Name: LongHorn Steakhouse
+  formatted_address: 4410 13th Ave S, Fargo, ND 58103, United States
+  lat: '46.861452'
+  lng: '-96.859844'
+  place_id: ChIJYxFGi2fLyFIRU8y7aEBU5ns
+- Name: Lucy's North China Cuisine
+  formatted_address: 3003 32nd Ave S, Fargo, ND 58103, United States
+  lat: '46.8330335'
+  lng: '-96.8285554'
+  place_id: ChIJH7vEp1_MyFIRl08W7iGCAa4
+- Name: Doolittles Woodfire Grill
+  formatted_address: 2112 25th St SW, Fargo, ND 58103, United States
+  lat: '46.8457847'
+  lng: '-96.8180322'
+  place_id: ChIJgWmnSnDMyFIRkeLYuONrIVM
+- Name: Pirogue Grille
+  formatted_address: 121 N 4th St, Bismarck, ND 58501, United States
+  lat: '46.8062588'
+  lng: '-100.7857196'
+  place_id: ChIJ3aQbQhSD11IRgXiZGUjEjCQ
+- Name: Olive Garden
+  formatted_address: 3160 32nd Ave S, Grand Forks, ND 58201, United States
+  lat: '47.8902162'
+  lng: '-97.0721319'
+  place_id: ChIJL2BnH--AxlIRFggRroJ1zaA
+- Name: Perkins Restaurant & Bakery
+  formatted_address: 1305 S Columbia Rd, Grand Forks, ND 58201, United States
+  lat: '47.9089154'
+  lng: '-97.0659591'
+  place_id: ChIJxc6hxiOBxlIRgqmnLIRbBVo
+- Name: Perkins Restaurant & Bakery
+  formatted_address: 2410 Highway 281 S, Jamestown, ND 58401, United States
+  lat: '46.8831529'
+  lng: '-98.7175883'
+  place_id: ChIJmRmfa-au2lIREiImU62eVz8
+- Name: Perkins Restaurant & Bakery
+  formatted_address: 1100 E Interstate Ave, Bismarck, ND 58503, United States
+  lat: '46.8350255'
+  lng: '-100.7739873'
+  place_id: ChIJ6XAzOU2C11IRqghw9JQoMLc
+- Name: Olive Garden
+  formatted_address: 3400 N 14th St, Bismarck, ND 58503, United States
+  lat: '46.8433775'
+  lng: '-100.7715403'
+  place_id: ChIJTW5jmkmC11IR3QIOpc0biVI
+- Name: Green Mill Restaurant & Bar
+  formatted_address: 3340 13th Ave S, Fargo, ND 58103, United States
+  lat: '46.86108'
+  lng: '-96.834896'
+  place_id: ChIJs4xBRYLLyFIRUkTnT1lojvQ
+- Name: Green Mill Restaurant & Bar
+  formatted_address: 1930 S Columbia Rd, Grand Forks, ND 58201, United States
+  lat: '47.9017099'
+  lng: '-97.0675891'
+  place_id: ChIJ0Uau6N-AxlIRIaDaWMXHewY
+- Name: Perkins Restaurant & Bakery
+  formatted_address: 100 E Bismarck Expy, Bismarck, ND 58504, United States
+  lat: '46.7954828'
+  lng: '-100.7912725'
+  place_id: ChIJnxE_hEaD11IRHs86SQAeLdI
+- Name: Perkins Restaurant & Bakery
+  formatted_address: 405 20th Ave SW, Minot, ND 58701, United States
+  lat: '48.2103002'
+  lng: '-101.2993084'
+  place_id: ChIJr0s0AVsq31IRk-z31blklj8
+- Name: China Buffet
+  formatted_address: US-10, Moorhead, MN 56560, United States
+  lat: '46.8780135'
+  lng: '-96.7285397'
+  place_id: ChIJqXLHn8HIyFIRD-AqMScmlyk
+- Name: Marlin's Family Restaurant
+  formatted_address: 3938 E Divide Ave, Bismarck, ND 58501, United States
+  lat: '46.82967'
+  lng: '-100.7293552'
+  place_id: ChIJUWkRXH6C11IR6m9SGNxLK9E
+- Name: Minervas Restaurant & Bar
+  formatted_address: 1800 N 12th St, Bismarck, ND 58501, United States
+  lat: '46.8247764'
+  lng: '-100.7744986'
+  place_id: ChIJTR3AKKuD11IRGJTsSrQeiEc
+- Name: Marlin's Family Restaurant
+  formatted_address: 3520 12th Ave N, Fargo, ND 58102, United States
+  lat: '46.8896423'
+  lng: '-96.8362979'
+  place_id: ChIJP03AaqzLyFIRuogU37pJW7k
+- Name: Cafe Aladdin
+  formatted_address: 530 6th Ave N, Fargo, ND 58102, United States
+  lat: '46.8818643'
+  lng: '-96.7868812'
+  place_id: ChIJ9adwK2TJyFIRTG612FPewtQ
+- Name: Paradiso Mexican Restaurant Jamestown
+  formatted_address: 413 24th St SW, Jamestown, ND 58401, United States
+  lat: '46.8831003'
+  lng: '-98.7143196'
+  place_id: ChIJh9l98YkT0FIR1Rl_PuS4-qU
+- Name: Toasted Frog
+  formatted_address: 124 N 3rd St, Grand Forks, ND 58203, United States
+  lat: '47.9266799'
+  lng: '-97.0324344'
+  place_id: ChIJy4lb0riGxlIRaK1BEA_c6Dk
+- Name: Don Pedro's Family Mexican Restaurant
+  formatted_address: 2516 2nd Ave W, Williston, ND 58801, United States
+  lat: '48.1681038'
+  lng: '-103.6252529'
+  place_id: ChIJczFRPL9cIVMR0WMPXi6tMEA
+- Name: Paradiso Mexican Restaurant Grand Forks
+  formatted_address: 905 S Washington St, Grand Forks, ND 58201, United States
+  lat: '47.9127722'
+  lng: '-97.0445715'
+  place_id: ChIJZbxwk9KGxlIRpgUt6Fsb0vE
+- Name: Texas Roadhouse
+  formatted_address: 4971 13th Ave S, Fargo, ND 58103, United States
+  lat: '46.8624901'
+  lng: '-96.8707045'
+  place_id: ChIJlzXiN0XLyFIR9Kr5WKiN-GQ
+- Name: Mezzaluna
+  formatted_address: 309 Roberts St N, Fargo, ND 58102, United States
+  lat: '46.8794268'
+  lng: '-96.7887129'
+  place_id: ChIJq0ws12bJyFIRE4AnWWZIgXc
+- Name: Texas Roadhouse
+  formatted_address: 3200 32nd Ave S, Grand Forks, ND 58201, United States
+  lat: '47.8902937'
+  lng: '-97.0739019'
+  place_id: ChIJZUikAO-AxlIRoscJqdiGuAw
+- Name: Culver's
+  formatted_address: 3451 32nd Ave S, Grand Forks, ND 58201, United States
+  lat: '47.888745'
+  lng: '-97.078224'
+  place_id: ChIJFxOvwPGAxlIRJsiwl2EqhGs
+- Name: 40 Steak & Seafood
+  formatted_address: 1401 E Interchange Ave, Bismarck, ND 58501, United States
+  lat: '46.829169'
+  lng: '-100.771097'
+  place_id: ChIJ0QUtcVOC11IRlSoz52cKWLs
+- Name: Olive Garden
+  formatted_address: 4339 13th Ave SW, Fargo, ND 58103, United States
+  lat: '46.862323'
+  lng: '-96.857473'
+  place_id: ChIJ8y_eMmbLyFIRhuuOoasyTQw
+- Name: The Toasted Frog
+  formatted_address: 305 Broadway N, Fargo, ND 58102, United States
+  lat: '46.8793579'
+  lng: '-96.7874292'
+  place_id: ChIJvXhc4GbJyFIRlUld6w6MhA0
+- Name: A & W All-American Food
+  formatted_address: 235 Osborn Dr, Dickinson, ND 58601, United States
+  lat: '46.8936068'
+  lng: '-102.7877864'
+  place_id: ChIJJzCH1FU9JlMRlkwmmB_BvUc
+- Name: A&W All American Food
+  formatted_address: 3100 S Broadway St, Minot, ND 58701, United States
+  lat: '48.2018825'
+  lng: '-101.2968527'
+  place_id: ChIJfTcBz_cq31IRoaE--osKW3Q
+- Name: Pita Pit
+  formatted_address: '2930 N 14th St #100, Bismarck, ND 58503, United States'
+  lat: '46.8390317'
+  lng: '-100.7719257'
+  place_id: ChIJY8NWXkmC11IRQCPa3fFAFzg
+- Name: Paradiso Mexican Restaurant
+  formatted_address: 801 38th St S, Fargo, ND 58103, United States
+  lat: '46.8669862'
+  lng: '-96.8441102'
+  place_id: ChIJL8r-ynbLyFIRJh0kbnGcVMo
+- Name: Pita Pit
+  formatted_address: 1500 S Broadway St, Minot, ND 58701, United States
+  lat: '48.2198563'
+  lng: '-101.2965591'
+  place_id: ChIJT5b6p0Eq31IRxtbSjgP4vvE
+- Name: Pita Pit
+  formatted_address: 1785 1st St W, Dickinson, ND 58601, United States
+  lat: '46.8799304'
+  lng: '-102.8114178'
+  place_id: ChIJQb9nOSIYJlMRirsjqE5iuzo
+- Name: Pita Pit
+  formatted_address: '3221 32nd Ave S #300, Grand Forks, ND 58201, United States'
+  lat: '47.888739'
+  lng: '-97.0745355'
+  place_id: ChIJHbnbQu6AxlIRhk70ixgmcxE
+- Name: Ruby Tuesday
+  formatted_address: 3520 State St, Bismarck, ND 58503, United States
+  lat: '46.84412'
+  lng: '-100.77387'
+  place_id: ChIJU5sbcjaC11IRok2ekWZdM4Q
+- Name: Peacock Alley
+  formatted_address: 422 E Main Ave, Bismarck, ND 58501, United States
+  lat: '46.8056728'
+  lng: '-100.7849729'
+  place_id: ChIJTYqKSRSD11IRgdjE2vIg2OQ
+- Name: Olive Garden
+  formatted_address: 1030 24th Ave SW, Minot, ND 58701, United States
+  lat: '48.2085929'
+  lng: '-101.3115316'
+  place_id: ChIJpQ__BFMq31IRPt6uAkXpbsg
+- Name: Pizza Ranch
+  formatted_address: 305 37th Ave SW, Minot, ND 58701, United States
+  lat: '48.1960363'
+  lng: '-101.2982984'
+  place_id: ChIJ3Wr5N_oq31IRZKrxVi2nMxA
+- Name: Passage To India Restaurant
+  formatted_address: 855 45th St S Suite A3, Fargo, ND 58103, United States
+  lat: '46.867855'
+  lng: '-96.862757'
+  place_id: ChIJXQBg9kHLyFIRXJmw1ChSX0M
+- *id001
+search_type: restaurant
+state: ND
+states:
+- AK
+- AL
+- AR
+- AZ
+- CA
+- CO
+- CT
+- DE
+- FL
+- GA
+- GU
+- HI
+- IA
+- ID
+- IL
+- IN
+- KS
+- KY
+- LA
+- MA
+- MD
+- ME
+- MI
+- MN
+- MO
+- MS
+- MT
+- NC
+- ND
+- NE
+- NH
+- NJ
+- NM
+- NV
+- NY
+- OH
+- OK
+- OR
+- PA
+- RI
+- SC
+- SD
+- TN
+- TX
+- UT
+- VA
+- VI
+- VT
+- WA
+- WI
+- WV
+- WY

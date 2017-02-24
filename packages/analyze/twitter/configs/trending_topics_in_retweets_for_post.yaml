@@ -1,0 +1,12 @@
+---
+description :
+    name : trending_topics_in_retweets_for_post
+    full description : ??
+parameters :
+    required :
+        - name : twitter_post_id
+          type : string
+          description : 'The twitter post identifier'
+tools :
+    - twitter_token_handler
+...

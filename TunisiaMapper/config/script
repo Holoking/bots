@@ -1,0 +1,81 @@
+---
+init:
+    loops: [0]
+    states: 
+        - "NY"
+    keywords:
+        - 'restaurant'
+        - 'bar'
+        - 'park'
+        - 'school'
+        - 'university'
+        - 'store'
+        - 'fast food'
+    country: "USA"
+    place_mongo_client:
+        host: 'localhost'
+        port: '27017'
+        user: 'NabNab'
+        pwd: 'AbdAbd'
+        database: 'TunisTest'
+        collection: 'usa_places'
+    google_account_key: 'AIzaSyBksI1g3hmNZXLyoctDmQoH8hdnpJWGLRo'
+steps:
+    - name: 1 - initialize google maps api
+      function:
+        name: maps_api.initiate_google_maps_api
+        parameters:
+            - $google_account_key
+        options:
+        return:
+            - gm_api
+    - instr: <for loop:$loops>
+    - instr: <for search_type:$keywords>      
+    - instr: <for state:$states>
+    - name: Get all places by state
+      function:
+        name: maps_api.get_places_within_state_by_type
+        parameters:
+            - $search_type
+            - $state
+            - $country
+            - $gm_api
+        options:
+        return:
+            - places_in_state
+    - instr: <for place:$places_in_state>
+    - name: Create document to save (per place)
+      function:
+        name: mongodb.store_place
+        parameters:
+            - $country
+            - $state
+            - $place
+            - $search_type
+            - $place_mongo_client
+        options:
+        return:
+    - instr: <rof>
+    - instr: <rof>
+    - instr: <rof>
+    - name: End iteration
+      function:
+        name: mongodb.end_iter
+        parameters:
+            - $loops
+        options:
+        return:
+            - loops
+    - instr: <rof>
+
+on_except:
+    - exception:
+        class: Timeout
+      handler:
+        function:
+            name: exception_handlers.TimeWait.execute
+            parameters:
+                - 30
+            options:
+            return:
+...

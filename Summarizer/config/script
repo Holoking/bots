@@ -1,0 +1,52 @@
+---
+init:
+    clock: '00:00'
+    filter: '%H:%M'
+    refresh: 60
+    source_client:
+        host: 'localhost'
+        port: '27017'
+        user: 'likwidteam'
+        pwd: '87BotsinAction!'
+        database: 'places'
+        collection: 'instagram'
+    target_client:
+        host: 'localhost'
+        port: '27017'
+        user: 'likwidteam'
+        pwd: '87BotsinAction!'
+        database: 'places'
+        collection: 'instagram_summary'
+steps:
+    - instr: <while TRUE>
+    - instr: <breakpoint $go>
+      wait: $refresh
+      function:
+        name: triggers.Time.alarmClock
+        parameters:
+            - $clock
+            - $filter
+        return:
+            - go
+    - name: Get all the places id to summarize on instagram
+      function:
+        name: mongodb_handler.get_distinct_place_ids
+        parameters:
+            - $source_client
+        options:
+        return:
+            - distinct_places
+    - instr: <for place:$distinct_places>
+    - name: Summarize analysis
+      function:
+        name: mongodb_handler.summarize_place
+        parameters:
+            - $place
+            - $source_client
+            - $target_client
+        options:
+        return:
+            - summary
+    - instr: <rof>
+    - instr: <liw>
+...

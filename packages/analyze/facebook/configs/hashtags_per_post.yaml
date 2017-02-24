@@ -1,0 +1,12 @@
+---
+description :
+    name : hashtags_per_post
+    full description : Returns the most frequently occurring hashtags in comments of a Facebook post.
+parameters :
+    required :
+        - name : fb_post_id
+          type : string
+          description : 'The facebook post identifier'
+tools :
+    - facebook_token_handler
+...

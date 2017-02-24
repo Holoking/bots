@@ -1,0 +1,13 @@
+current_step:
+  function:
+    name: Strategy.ExecuteAction
+    options: null
+    parameters:
+    - $action
+    - $tools
+    return:
+    - redacted
+    - results
+  name: Execute action
+state:
+  running: true

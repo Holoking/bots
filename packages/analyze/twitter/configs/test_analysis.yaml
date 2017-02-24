@@ -1,0 +1,9 @@
+---
+description :
+    name : test_analysis
+    full description : test_analysis
+parameters :
+tools :
+    - microsoft_cognitive_api
+    - twitter_token_handler
+...

@@ -1,0 +1,215 @@
+---
+init:
+    instagram_access_token: "3123381139.366fffd.5be62d70b0ca4b998ed5210cd1e6a351"
+    instagram_client_secret: "eae8e18827244476bb895bdfe1a7061d"
+    base_url: "https://westus.api.cognitive.microsoft.com/"
+    headers:
+        Content-Type: 'application/json'
+        Ocp-Apim-Subscription-Key: '5258e2016a2745dd9b3aa53f6dabc690'
+    place_mongo_client:
+        host: 'localhost'
+        port: '27017'
+        database: 'places'
+    instagram_mongo_client:
+        host: 'localhost'
+        port: '27017'
+        database: 'places'
+    database_name: 'places'
+steps:
+    - name: 1 - initialize instagram api
+      description: "Just starting the instagram api"
+      function:
+        name: socialtools.generateApi.get_instagram_api
+        parameters:
+            - $instagram_access_token
+            - $instagram_client_secret
+        options:
+        return:
+            - api
+    - instr: <while TRUE>
+    - name: get list places to analyse
+      function:
+        name: mongodb_handler.get_place_to_analyse_by_instagram
+        parameters:
+            - $place_mongo_client
+            - $database_name
+        return:
+            - csr
+    - name: Get Next Place
+      function:
+        name: mongodb_handler.GetNext
+        parameters:
+            - $csr
+        options:
+        return:
+            - place
+    - instr: <while $place>
+    - name: 2 - get place id from instagram
+      description: "get place id from instagram"
+      function:
+        name: worldmapper.instagram_common_function.get_place_id
+        parameters:
+            - $api
+            - $place
+        options:
+        return:
+            - id
+            - instagram_place_name
+    - name: 3 - get comment related to the place
+      description: "I'm at step one"
+      function:
+        name: worldmapper.functions_place_media_comments_instag_analysis.get_list_of_media_comments_location
+        parameters:
+            - $api
+            - $id
+        options:
+            since: 1485792963
+        return:
+            - commentlist
+    - name: 4 - get hashtags related to the place
+      description: "I'm at step one"
+      function:
+        name: worldmapper.functions_place_media_comments_instag_analysis.trending_hashtags_place_comments
+        parameters:
+            - $commentlist
+        options:
+        return:
+            - listhashtags
+    - name: Create document to save (per place)
+      function:
+        name: mongodb_handler.store_hashtags_per_place_instagram
+        parameters:
+            - $listhashtags
+            - $place
+            - $instagram_place_name
+            - $id
+            - $instagram_mongo_client
+        options:
+        return:
+    - name: 5 - get topics from comments
+      description: "I'm at step one"
+      function:
+        name: worldmapper.instagram_common_function.get_topics_place_comments
+        parameters:
+            - $commentlist
+            - $base_url
+            - $headers
+        options:
+        return:
+            - listtopic
+    - name: Create document to save (per place)
+      function:
+        name: mongodb_handler.store_topics_per_place_instagram
+        parameters:
+            - $listtopic
+            - $place
+            - $instagram_place_name
+            - $id
+            - $instagram_mongo_client
+        options:
+        return:
+    - name: 6 - get emojis from comments
+      description: "I'm at step one"
+      function:
+        name: worldmapper.instagram_common_function.get_Emojis
+        parameters:
+            - $commentlist
+        options:
+        return:
+            - listemoji
+    - name: Create document to save (per place)
+      function:
+        name: mongodb_handler.store_emojis_per_place_instagram
+        parameters:
+            - $listemoji
+            - $place
+            - $instagram_place_name
+            - $id
+            - $instagram_mongo_client
+        options:
+        return:
+    - name: 7 - get captions
+      description: "I'm at step one"
+      function:
+        name: worldmapper.functions_place_media_caption_instag_analysis.get_list_of_media_caption_tags_location
+        parameters:
+            - $api
+            - $id
+        options:
+            since: 1485792963
+        return:
+            - captions
+            - tag_list
+    - name: 8 - get hashtags from caption
+      description: "I'm at step one"
+      function:
+        name: worldmapper.functions_place_media_caption_instag_analysis.get_hashtags_medias_captions_location
+        parameters:
+            - $tag_list
+        options:
+        return:
+            - hashtagslist_fromcaption
+    - name: Create document to save (per place)
+      function:
+        name: mongodb_handler.store_hashtags_from_captions_per_place_instagram
+        parameters:
+            - $hashtagslist_fromcaption
+            - $place
+            - $instagram_place_name
+            - $id
+            - $instagram_mongo_client
+        options:
+        return:
+    - name: 9 - get topics from caption
+      description: "I'm at step one"
+      function:
+        name: worldmapper.instagram_common_function.get_topics_place_comments
+        parameters:
+            - $captions
+            - $base_url
+            - $headers
+        options:
+        return:
+            - topicslist_fromcaption
+    - name: Create document to save (per place)
+      function:
+        name: mongodb_handler.store_topics_from_captions_per_place_instagram
+        parameters:
+            - $topicslist_fromcaption
+            - $place
+            - $instagram_place_name
+            - $id
+            - $instagram_mongo_client
+        options:
+        return:
+    - name: 10 - get emoji from caption
+      description: "I'm at step one"
+      function:
+        name: worldmapper.instagram_common_function.get_Emojis
+        parameters:
+            - $captions
+        options:
+        return:
+            - emojilist_fromcaption
+    - name: Create document to save (per place)
+      function:
+        name: mongodb_handler.store_emojis_from_captions_per_place_instagram
+        parameters:
+            - $emojilist_fromcaption
+            - $place
+            - $instagram_place_name
+            - $id
+            - $instagram_mongo_client
+        options:
+        return:
+    - name: Get Next Place
+      function:
+        name: mongodb_handler.GetNext
+        parameters:
+            - $csr
+        options:
+        return:
+            - place
+    - instr: <liw>
+    - instr: <liw>
+...

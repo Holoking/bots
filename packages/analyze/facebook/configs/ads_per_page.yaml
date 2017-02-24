@@ -1,0 +1,15 @@
+---
+description :
+    name : ads_per_page
+    full description : ??.
+parameters :
+    required :
+        - name : fb_page_id
+          type : string
+          description : 'The facebook page identifier'
+        - name : country
+          type : list
+          description : 'The country to analyse'
+tools :
+    - facebook_ads_token_handler
+...

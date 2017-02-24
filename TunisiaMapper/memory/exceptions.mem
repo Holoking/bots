@@ -1,0 +1,3 @@
+- at_step: Get all places by state
+  class: UnboundLocalError
+  msg: local variable 'places' referenced before assignment

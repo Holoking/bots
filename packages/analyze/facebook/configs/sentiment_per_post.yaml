@@ -1,0 +1,13 @@
+---
+description :
+    name : sentiment_per_post
+    full description : sentiment_per_post
+parameters :
+    required :
+        - name : fb_post_id
+          type : string
+          description : 'The facebook post identifier'
+tools :
+    - microsoft_cognitive_api
+    - facebook_token_handler
+...

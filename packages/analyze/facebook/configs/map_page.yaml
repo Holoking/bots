@@ -1,0 +1,22 @@
+---
+description :
+    name : map_page
+    full description : Returns a list of all posts ids' in facebook a page
+parameters :
+    required :
+        - name : fb_page_id
+          type : string
+          description : 'The facebook page identifier'
+    optional :
+        - name : since
+          type : int
+          description : 'Starting Analyse time. Default value is yesterday'
+        - name : until
+          type : int
+          description : 'Ending Analyse time. Default value is now'
+        - name : limit
+          type : int
+          description : 'Maximum number of posts to analyse'
+tools :
+    - facebook_token_handler
+...

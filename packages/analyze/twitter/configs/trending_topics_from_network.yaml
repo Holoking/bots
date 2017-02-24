@@ -1,0 +1,22 @@
+---
+description :
+    name : trending_topics_from_network
+    full description : ??
+parameters :
+    required :
+        - name : twitter_profile_id
+          type : string
+          description : 'The twitter profile identifier'
+    optional :
+        - name : since
+          type : string
+          description : 'Starting analysis time. Default value is '
+        - name : until
+          type : string
+          description : 'Ending analysis time. Default value is '
+        - name : timespan
+          type : string
+          description : 'Timespan related to the network'
+tools :
+    - twitter_token_handler
+...

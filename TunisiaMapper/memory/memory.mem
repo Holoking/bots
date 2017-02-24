@@ -1,0 +1,76 @@
+country: USA
+cursor:
+  blocs:
+  - anchor: 3
+    container: $states
+    idle: false
+    pointer: 0
+    type: 0
+    vars: state
+  - anchor: 2
+    container: $keywords
+    idle: false
+    pointer: 0
+    type: 0
+    vars: search_type
+  - anchor: 1
+    container: $loops
+    idle: false
+    pointer: 0
+    type: 0
+    vars: loop
+  position: 4
+  state: exec
+gm_api: !!python/object:googlemaps.client.Client
+  _extra_params: null
+  channel: null
+  client_id: null
+  client_secret: null
+  key: AIzaSyBksI1g3hmNZXLyoctDmQoH8hdnpJWGLRo
+  queries_per_second: 10
+  requests_kwargs:
+    headers:
+      User-Agent: GoogleGeoApiClientPython/2.4.5
+    timeout: null
+    verify: true
+  retry_timeout: !!python/object/apply:datetime.timedelta
+  - 0
+  - 60
+  - 0
+  sent_times: !!python/object/apply:collections.deque
+  - []
+  - 10
+  timeout: null
+google_account_key: AIzaSyBksI1g3hmNZXLyoctDmQoH8hdnpJWGLRo
+keywords:
+- restaurant
+- bar
+- park
+- school
+- university
+- store
+- fast food
+loop: 0
+loops:
+- 0
+on_except:
+- exception:
+    class: Timeout
+  handler:
+    function:
+      name: exception_handlers.TimeWait.execute
+      options: null
+      parameters:
+      - 30
+      return: null
+place_mongo_client:
+  collection: usa_places
+  database: TunisTest
+  host: localhost
+  port: '27017'
+  pwd: AbdAbd
+  user: NabNab
+search_type: restaurant
+state: NY
+states:
+- NY

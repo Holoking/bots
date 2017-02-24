@@ -1,0 +1,12 @@
+---
+description :
+    name : get_metrics_timeline
+    full description : ??
+parameters :
+    required :
+        - name : twitter_profile_id
+          type : string
+          description : 'The Twitter Profile Identifier'
+tools :
+    - twitter_token_handler
+...

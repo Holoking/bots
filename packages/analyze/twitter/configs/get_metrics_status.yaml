@@ -1,0 +1,15 @@
+---
+description :
+    name : get_metrics_status
+    full description : ??
+parameters :
+    required :
+        - name : twitter_profile_id
+          type : string
+          description : 'The twitter profile identifier'
+        - name : twitter_post_id
+          type : string
+          description : 'The twitter post identifier'
+tools :
+    - twitter_token_handler
+...

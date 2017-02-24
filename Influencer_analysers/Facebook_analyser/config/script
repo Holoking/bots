@@ -1,0 +1,104 @@
+---
+init:
+    tools:
+        fb_access_token: 'EAAW4yOBGazsBANv62ViY7dwKMgxbM2NW4YPscZBtX1YXCJSqpNFFREJ8ZBfRircO91k49X9I4YAebyZCMfERC9qIFv3chVQi2O2OJCA1u5P1y8ZCXmjGt4WyRR9wJtYv90q3kTL57bFBoZB6AWAim'
+        fb_token_version: '2.7'
+        base_url: "https://westus.api.cognitive.microsoft.com/"
+        headers:
+            Content-Type: 'application/json'
+            Ocp-Apim-Subscription-Key: '5258e2016a2745dd9b3aa53f6dabc690'
+    targets_mongo_client:
+        host: '13.81.119.126'
+        port: '27017'
+        user: 'likwidteam'
+        pwd: '87BotsinAction!'
+        database: 'Influencers'
+        collection: 'Identities'
+    reports_mongo_client:
+        host: '13.81.119.126'
+        port: '27017'
+        user: 'likwidteam'
+        pwd: '87BotsinAction!'
+        database: 'Influencers'
+        collection: 'Mapping_Facebook'
+    analysis_mongo_client:
+        host: '13.81.119.126'
+        port: '27017'
+        user: 'likwidteam'
+        pwd: '87BotsinAction!'
+        database: 'Influencers'
+        collection: 'Facebook_analysis'
+steps:
+    - instr: <while TRUE>
+    - name: Get targets list
+      function:
+        name: mongodb_handler.get_targets
+        parameters:
+            - $targets_mongo_client
+        return:
+            - targets
+    - name: Get first target
+      function:
+        name: mongodb_handler.getNext
+        parameters:
+            - $targets
+        return:
+            - target
+    - instr: <while $target>
+    - name: Scout target
+      function:
+        name: Strategy.Scout
+        parameters:
+            - $target
+            - $tools
+        return:
+            - new_report
+    - name: Save New Report
+      function:
+        name: mongodb_handler.saveReport
+        parameters:
+            - $target
+            - $new_report
+            - $reports_mongo_client
+    - name: Define strategy
+      function:
+        name: Strategy.Define
+        parameters:
+            - $target
+            - $new_report
+            - NONE
+        return:
+            - strategy
+    - instr: <for action:$strategy>
+    - name: Execute action
+      function:
+        name: Strategy.ExecuteAction
+        parameters:
+            - $action
+            - $tools
+        options:
+        return:
+            - redacted
+            - results
+    - name: Store results into database
+      function:
+        name: mongodb_handler.storeAnalysis
+        parameters:
+            - $redacted
+            - $target
+            - $action
+            - $results
+            - $analysis_mongo_client
+        options:
+        return:
+    - instr: <rof>
+    - name: Get next target
+      function:
+        name: mongodb_handler.getNext
+        parameters:
+            - $targets
+        return:
+            - target
+    - instr: <liw>
+    - instr: <liw>
+...

@@ -1,0 +1,12 @@
+current_step:
+  function:
+    name: triggers.Time.alarmClock
+    parameters:
+    - $clock
+    - $filter
+    return:
+    - go
+  instr: <breakpoint $go>
+  wait: $refresh
+state:
+  running: true

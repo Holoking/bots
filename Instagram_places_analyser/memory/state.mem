@@ -1,0 +1,14 @@
+current_step:
+  description: I'm at step one
+  function:
+    name: worldmapper.functions_place_media_comments_instag_analysis.get_list_of_media_comments_location
+    options:
+      since: 1485792963
+    parameters:
+    - $api
+    - $id
+    return:
+    - commentlist
+  name: 3 - get comment related to the place
+state:
+  running: true
